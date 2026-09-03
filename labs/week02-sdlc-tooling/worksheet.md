@@ -332,6 +332,8 @@ The following changes remediate the five planted flaws while keeping the applica
 
 The SQL change fixes **CWE-89** because the input is passed as a value rather than being interpreted as SQL. The subprocess change fixes **CWE-78** by avoiding the shell, the environment-variable change fixes **CWE-798** by removing committed secrets, Argon2 fixes **CWE-327** by using a password-hashing function designed for passwords, and `debug=False` fixes **CWE-489** by disabling the production debugger. The fixed version must add `argon2-cffi` to `requirements.txt` and set both environment variables outside the source repository.
 
+**Code remediation commit:** `4acb19c8820b2c0a5102a36e03aa4bad40b0cfaf`
+
 ## Part 4 — Reflection 🟢
 1. Map two of your findings to their CWE and to the matching OWASP 2025 category.
 2. Name a real-world breach caused by a hardcoded/leaked secret or an injection flaw, and what control would have caught it pre-release.
